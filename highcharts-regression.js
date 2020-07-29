@@ -273,7 +273,8 @@
             return 0;
         });
 
-        var string = 'y = ' + Math.round(gradient * 100) / 100 + 'x + ' + Math.round(intercept * 100) / 100;
+        var factor = 10 ** decimalPlaces;
+        var string = 'y = ' + Math.round(gradient * factor) / factor + 'x + ' + Math.round(intercept * factor) / factor;
         return {equation: [gradient, intercept], points: results, string: string};
     }
 
